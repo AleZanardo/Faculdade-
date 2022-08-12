@@ -1,0 +1,89 @@
+1. Faça um programa que leia um vetor de 10 posições e verifique se existem valores
+iguais e os escreva na tela.
+        {
+            int[] v  = new int[10] { 1, 2, 3, 10, 5, 6, 7, 8, 9, 10 } ;
+            int repetido = 0;
+            for (int i = 0; i < v.Length; i++)
+            {
+                if (v[i] == v[i])
+                {
+                    repetido = v[i];
+                }
+            }
+            Console.WriteLine($"Valor repetido: {repetido}");
+            Console.ReadKey();
+        }
+
+2. Leia um vetor de 10 posições e atribua valor 0 para todos os elementos que
+possuírem valores negativos.
+        { 
+            int[] v = new int[10] { 1, -2, 3, -8, 7, 5, -3, 8, 9, 10 };
+            int zero = 0;
+            for (int i = 0; i < v.Length; i++)
+            {
+                if (v[i] <= zero)
+                {
+                    v[i] = zero;
+                }
+                Console.Write(v[i] + "");
+            }
+            Console.ReadKey();
+         }
+
+3. Fazer método que calcule a leitura de uma temperatura medida em graus Celsius e
+faça a conversão em graus Fahrenheit. A fórmula para a conversão das temperaturas é
+F = (9 * C + 160)/5, sendo F a temperatura em Fahrenheit e C em Celsius.
+         {
+            double tempc = 0;
+            double tempf = 0;
+            Console.WriteLine("Digite a temperatura em Celsius:");
+            tempc =double.Parse(Console.ReadLine());
+            tempf = (tempc * 9 + 16) / 5;
+            Console.WriteLine($"Temperatura em Fahenheit: {tempf}°f");
+            Console.ReadKey();
+         }
+
+4. Fazer método que recebe 3 valores e o método retorna o menor dentre eles.
+         {
+            int n1=0;
+            int n2=0;
+            int n3=0;
+            Console.WriteLine("Digite o primeiro numero:");
+            n1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o segundo numero:");
+            n2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite o terceiro numero:");
+            n3 = int.Parse(Console.ReadLine());
+
+            if (n1 < n2 && n1 < n3)
+            {
+                Console.WriteLine($"Menor valor: {n1}");
+            }
+            if (n2 < n1 && n2 < n3)
+            {
+                Console.WriteLine($"Menor valor: {n2}");
+            }
+            else if (n3 < n1 && n3 < n2)
+            {
+                Console.WriteLine($"Menor valor: {n3}");
+            }
+            Console.ReadKey();
+         }
+              
+5. Fazer método que recebe um vetor de número inteiros e retorna a soma dos
+números impares.
+         {
+            int[] n = new int[10];
+            int soma = 0;
+            for (int i = 0; i < n.Length; i++)
+            {
+                Console.WriteLine("Digite os numeros:");
+                n[i] = int.Parse(Console.ReadLine());
+                if (n[i] % 2 ==1)
+                {
+                    soma+=n[i];
+                }
+            }
+            Console.WriteLine($"A soma dos numeros impares é: {soma}");
+            Console.ReadKey();
+         }
