@@ -1,0 +1,209 @@
+1. Faça um programa que leia 10 números inteiros do teclado e os
+armazene num vetor. Depois, percorrer esse vetor mostrando os números
+ímpares.
+
+      int[] v = new int[10];
+            for (int i=0; i<10; i++)
+            {
+                v[i] = int.Parse(Console.ReadLine());
+            }
+            for (int i = 0; i<0; i++)
+            {
+                if (v[i] % 2 == 1)
+                {
+                    Console.WriteLine("Numeros impares: " + v[i]);
+                }            
+            }
+            Console.ReadKey();
+
+2. Colocar num vetor os números entre 10 e 1 e depois mostrar de forma
+invertida.
+            int [] v = {10,9,8,7,6,5,4,3,2,1};
+           
+            Console.WriteLine("Numeros invertidos:");
+            for (int i=9; i >= 0 ; i--)
+            {
+                Console.WriteLine(v[i]);
+            }
+            Console.ReadKey();
+
+3. Colocar num vetor os números entre 1 e 10 e depois mostrar somente os
+pares.
+            int[] numero = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            for (int i=0; i <= 9 ; i++)
+            {
+                if (numero[i] % 2 == 0)
+                {
+                    Console.WriteLine("Numeros pares: " + numero[i]);
+                }
+            }
+            Console.ReadKey();
+
+4. Faça um programa que leia um vetor de números inteiros N[20]. A seguir,
+encontre o menor elemento do vetor N e a sua posição dentro do vetor,
+mostrando: “O menor elemento de N é ..., e sua posição dentro do vetor
+é:...”.
+           int menor = 0, posicao_menor = 0;
+            int[] N = new int[20] {25,12,85,53,95,63,47,52,55,34,36,25,74,780,95,20,14,10,2,3};
+            for (int i = 0; i < N.Length; i++)
+            {
+                if (N[i] <=2 )
+                {
+                    menor=N[i];
+                    posicao_menor = i;
+                }    
+            }
+           Console.WriteLine($"O menor numero encontrado foi: {menor}, encontrado na        
+           posição: {posicao_menor}");
+            Console.ReadKey();
+
+5. Faça um programa que, usando vetor, armazene as idades de quarenta
+alunos e exiba na tela a média de idade, a maior idade e a menor idade
+desses alunos.
+            int menor_idade = 0;
+            int maior_idade = 0;
+            int[] idade = new int[40] {25,14,12,13,11,24,54,40,30,65,80,90,26,43,27,
+               10,5,70,23,24,25,14,12,13,11,24,54,40,30,65,80,90,26,43,27,10,5,70,23,24};
+            for (int i = 0; i < idade.Length; i++)
+            {
+                if (idade[i] <=5)
+                {
+                    menor_idade =idade[i];
+                }
+                else if (idade[i] >= 90)
+                {
+                    maior_idade =idade[i];
+                }
+            }
+            Console.WriteLine($"A media entre a maior e a menor idade é:{(maior_idade + menor_idade) / 2} ");
+            Console.ReadKey();
+
+6. Faça um programa que leia 10 números inteiros, e os armazene em um
+vetor, e um valor inteiro x, e exiba a quantidade de vezes que x aparece
+nesse vetor.
+        {
+            int[] idade = new int[20];
+            int X = 5;
+            int y = 0;
+            for (int i = 0; i < idade.Length; i++)
+            {
+                Console.WriteLine("Digite um valor inteiro:");
+                idade[i]= int.Parse(Console.ReadLine());
+                if (idade[i] == X)
+                {
+                    y++;
+                }
+                i++;
+            }
+
+            Console.WriteLine($"O valor: {X}, aparece: {y} vezes.");
+            Console.ReadKey();
+        }
+
+7. Entrar com o nome e nota final de 10 alunos e depois mostrar somente o
+nome e média dos alunos que tiraram nota acima de 5,0.
+
+            int nota = 0;
+            String aluno = "";
+            int[] N = new int[10];
+            string[] nome  = new string[10];
+
+            for (int i = 0; i < N.Length; i++)
+            {
+                Console.WriteLine("Digite o nome:");
+                aluno = Console.ReadLine();
+                Console.WriteLine("Digite a nota:");
+                nota = int.Parse(Console.ReadLine());
+
+                if (nota >= 5)
+                {
+                    N[i] = nota;
+                    nome[i] = aluno;
+                }
+            }
+            for (int i = 0; i < N.Length; i++)
+            {
+                if (N[i] > 0)
+                {
+                    Console.WriteLine($"O aluno: {nome[i]} tem a nota: {N[i]}");
+                }
+            }
+            Console.ReadLine();
+
+8. Faça um programa que leia 10 números inteiros do teclado e os
+armazene num vetor. Depois, percorrer esse vetor e contar quantos
+desses números são pares e impares.
+
+            int[] n = new int[10];
+            int npares = 0; int nimpares = 0;
+            for (int i = 0; i<10; i++)
+            {
+                Console.WriteLine("Digite os numeros:");
+                n[i] = int.Parse(Console.ReadLine());
+                
+                if(n [i] %2 ==1)
+                {
+                    nimpares++;
+                }
+                else
+                {
+                    npares++;
+                }
+            }
+            Console.WriteLine($"São {npares} numeros pares e {nimpares} numeros impares.");
+            Console.ReadKey();
+
+9. Faça um programa que receba 16 números inteiros e os armazene em
+uma matriz 4x4, e depois exiba o conteúdo dessa matriz.
+
+            int[,] N = new int[4,4];
+            Console.WriteLine("Digite os numeros:");
+            N[0, 0] = int.Parse(Console.ReadLine());
+            N[0, 1] = int.Parse(Console.ReadLine());
+            N[0, 2] = int.Parse(Console.ReadLine());
+            N[0, 3] = int.Parse(Console.ReadLine());
+            N[1, 0] = int.Parse(Console.ReadLine());
+            N[1, 1] = int.Parse(Console.ReadLine());
+            N[1, 2] = int.Parse(Console.ReadLine());
+            N[1, 3] = int.Parse(Console.ReadLine());
+            N[2, 0] = int.Parse(Console.ReadLine());
+            N[2, 1] = int.Parse(Console.ReadLine());
+            N[2, 2] = int.Parse(Console.ReadLine());
+            N[2, 3] = int.Parse(Console.ReadLine());
+            N[3, 0] = int.Parse(Console.ReadLine());
+            N[3, 1] = int.Parse(Console.ReadLine());
+            N[3, 2] = int.Parse(Console.ReadLine());
+            N[3, 3] = int.Parse(Console.ReadLine());
+            for (int i=0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {                   
+                    Console.Write(N[i, j] + "  ");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
+
+10.Faça um programa que receba os valores para uma matriz inteira 2x4,
+gere e exiba na tela uma matriz transposta (4x2). Uma matriz transposta é
+gerada trocando a linha pela coluna.
+
+            int[,] N = new int[4, 2];
+            Console.WriteLine("Digite os numeros:");
+            N[0, 0] = int.Parse(Console.ReadLine());
+            N[0, 1] = int.Parse(Console.ReadLine());
+            N[1, 0] = int.Parse(Console.ReadLine());
+            N[1, 1] = int.Parse(Console.ReadLine());
+            N[2, 0] = int.Parse(Console.ReadLine());
+            N[2, 1] = int.Parse(Console.ReadLine());
+            N[3, 0] = int.Parse(Console.ReadLine());
+            N[3, 1] = int.Parse(Console.ReadLine());
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write(N[j, i] + "  ");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
