@@ -1,0 +1,104 @@
+1. O código do programa abaixo efetua leitura de um valor numérico informado pelo
+usuário e apresenta na console a mensagem “Valor entrado maior que 10”, caso o
+valor entrado seja maior que 10. Caso contrário, exibir na console a mensagem “Valor
+entrado não é maior que 10”. Implementar o programa na plataforma MS-Visual
+Studio ou em ambiente online.     
+ {
+            int valor;
+            Console.WriteLine("-----inicio do programa-----");
+            Console.WriteLine("Entre com um valor numerico inteiro: ");
+
+            valor = int.Parse(Console.ReadLine());
+            Console.WriteLine("Valor entrado: {0}", valor);
+            if (valor > 10)
+            {
+                Console.WriteLine("valor entrado é maior que 10");
+            }
+
+            else
+            {
+                Console.WriteLine("valor entrado não é maior que 10");
+            }
+
+            Console.WriteLine("----- Fim do programa -----");
+            Console.ReadKey();
+
+        }
+
+2. Escrever um programa na Linguagem C# que efetua a leitura de um número inteiro.
+O programa deverá enviar uma mensagem informando se o número entrado é par ou
+ímpar.
+      {
+            int Numero;
+            Console.WriteLine("Digite o Numero");
+            Numero = int.Parse(Console.ReadLine());
+            if (Numero %2==0)
+            {
+                Console.WriteLine("Numero inserido é par");
+            }
+            else
+            {
+                Console.WriteLine("Numero inserido é impar");
+            }
+            Console.WriteLine("----- Fim do programa -----");
+            Console.ReadKey();
+        }
+
+3. Escrever um programa na Linguagem C#, no qual o usuário informa as três notas de
+um aluno em uma determinada disciplina. Os valores entrados deverão ser do tipo
+double. O programa deverá informar as notas entradas, o valor da média aritmética
+das notas e a mensagem “Aprovado” se a média for superior ou igual a 6.0. Caso
+contrário, o programa deverá exibir na console a mensagem “Reprovado”.
+
+{
+            double N1, N2, N3, Media;
+            Console.WriteLine("Digite a primeira nota");
+            N1 = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a segunda nota");
+            N2 = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a terceira nota");
+            N3 = Double.Parse(Console.ReadLine());
+            Media = (N1 + N2 + N3 % 3);
+            if (Media<=6)
+            {
+                Console.WriteLine("Aprovado");
+            }
+            else
+            {
+                Console.WriteLine("Reprovado");
+            }
+            Console.ReadKey();
+}
+
+4. Escrever um programa na Linguagem C#, no qual o usuário informa as três notas de
+um aluno em uma determinada disciplina. Os valores entrados deverão ser do tipo
+double. O programa deverá informar as notas entradas, o valor da média ponderada
+das notas e a mensagem “Aprovado” se a média for superior ou igual a 5.0. Caso
+contrário, o programa deverá exibir na console a mensagem “Reprovado”. Considerar
+para o cálculo da média ponderada os seguintes pesos:
+Peso 2 para a prova P1;
+Peso 3 para a prova P2;
+Peso 4 para a prova P3.
+
+{
+            double P1, P2, P3, M1, M2, M3, MF;
+            Console.WriteLine("Digite a nota da Prova 1");
+            P1 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a nota da Prova 2");
+            P2 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite a nota da Prova 3");
+            P3 = double.Parse(Console.ReadLine());
+            M1 = (P1 * 2);
+            M2 = (P2 * 3);
+            M3 = (P3 * 4);
+            MF = ((M1 + M2 + M3) / 9);
+            if (MF<=6)
+            {
+                Console.WriteLine("Repovado");
+            }
+            else
+            {
+                Console.WriteLine("Aprovado");
+            }
+            Console.ReadKey();
+}
